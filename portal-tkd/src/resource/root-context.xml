@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+	
+ 
+	<context:component-scan base-package="com.mx.takeda.portaltkd.controller" />
+	
+    <jee:jndi-lookup id="dataSource" jndi-name="java:/dsportal" resource-ref="true" ></jee:jndi-lookup>
+    
+	<import resource="classpath:/resource/business-context.xml"/>
+	<import resource="classpath:/resource/data-context.xml"/>
+	
+	
+</beans>
